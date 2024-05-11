@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>Website login</title>
+</head>
+
+<body>
+    <header>
+        <div class="left_bx1">
+            <div class="content">
+                <form id='login-form' method="post">
+                    <h3>Login</h3>
+
+                    <div class="card">
+                        <label for="name">Username</label>
+                        <input type="text" name="user_name" placeholder="Enter your Username....." required>
+                    </div>
+
+                    <div class="card">
+                        <label for="password">Password</label>
+                        <input type="password" name="user_password" placeholder="Enter your Password....." required>
+                    </div>
+
+                    <input type="submit" value="Login" class="submit">
+
+                    <div class="check">
+                        <input type="checkbox" name="remember" id="remember"/>
+                        <label for="remember"> Remember me</label>
+                    </div>
+
+                    <p>Don't Have a Account yet ? <a href="./signup.html">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="right_bx1">
+            <!-- Dynamic background image with 3D modal -->
+            <div class="modal">
+                <img src="https://via.placeholder.com/800x600" alt="Authentication">
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <script src="js/login.js" type="module"></script>
+
+</body>
+
+</html>

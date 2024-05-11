@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinrai - The Security Authentication Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pass.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <img id="logo" src="img/WhatsApp_Image_2024-04-02_at_23.33.54_a3b612e2-removebg-preview.png" alt="" class="logo-img">
+        <a class="navbar-brand" href="#">SHINRAI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportContent" aria-controls="navbarSupportContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="logoutnav">
+                    <a class="nav-link" href="index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron text-center" style="background-color: #9e7bc7; color: #ffc107;">
+        <h1>Welcome to Shinrai</h1>
+        <p>Your privacy is our priority</p> 
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>How Shinrai Protects Your Privacy</h3>
+                <p>Shinrai uses state-of-the-art encryption to protect your data. We never share your personal information with third parties without your explicit consent. Our user authentication software ensures that only you can access your account. With Shinrai, your privacy is in safe hands.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p>We're thrilled to have you here. Your digital life contains a myriad of passwords, and we know how challenging it can be to manage them all. That's why we're here to make it easy for you.</p>
+        
+        <!-- Search bar -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by website or username" id="searchInput">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="searchButton">Search</button>
+        </div>
+    </div>
+        
+
+        <h2>Your Passwords <span id="alert">(Copied!)</span></h2> 
+        <div id="passwordCards" class="row">
+            <!-- Bootstrap cards will be dynamically added here -->
+        </div>
+        <h2>Add a Password</h2>
+        <form id="passwordForm">
+            <div class="form-group">
+                <label for="website">Website:</label>
+                <input type="text" class="form-control" id="website" name="website" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Generate Password Section -->
+    <div style="margin-top: 20px; background-color: whitesmoke;" class="container" id="genpass">
+        <h2>Generate Password</h2>
+        <div id="passwordGenerator">
+            <label for="passwordStrength">Password Strength:</label>
+            <select class="form-control" id="passwordStrength">
+                <option value="weak">Weak</option>
+                <option value="medium">Medium</option>
+                <option value="strong">Strong</option>
+            </select>
+            <button id="generatePasswordBtn" class="btn btn-primary mt-2">Generate Password</button>
+        </div>
+        <div id="passwordDisplay" style="display: none;">
+            <input type="text" class="form-control mt-3" id="displayedPassword" readonly>
+            <button id="copyGeneratedPasswordBtn" class="btn btn-primary mt-2">Copy Password</button>
+            <button id="hideGeneratedPasswordBtn" class="btn btn-secondary mt-2">Hide</button>
+        </div>
+    </div>
+    
+    <!-- Feedback Section -->
+    <div class="container mt-5">
+        <h2>Feedback</h2>
+        <form>
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea class="form-control" id="feedback" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Shinrai - All Rights Reserved</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="#" class="text-light mx-2">Privacy Policy</a>
+                    <a href="#" class="text-light mx-2">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="pass.js"></script>
+
+</body>
+</html>

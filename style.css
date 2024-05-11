@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Changed text color */
+    background-color: #4a3df5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-top: 120px;
+}
+
+.left_bx1 {
+    width: 50%;
+}
+
+.right_bx1 {
+    position: relative;
+}
+
+.right_bx1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+    opacity: 0.5; /* Reduced opacity for the background image */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #6c5ce7; /* Changed heading color */
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #6c5ce7; /* Changed label color */
+}
+
+.card input[type="text"],
+.card input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.card input[type="text"]:focus,
+.card input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #6c5ce7;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #4a3df5;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.check input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+}
+
+p a {
+    color: #6c5ce7;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
