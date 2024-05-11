@@ -25,14 +25,14 @@ header {
 }
 
 .right_bx1 img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+     margin-left: 45px;
+     padding-left: 60px;
+    /* transform: translate(-50%, -50%); */
     max-width: 100%;
     height: auto;
-    z-index: -1;
-    opacity: 0.5; /* Reduced opacity for the background image */
+    /* z-index: -1; */
+    /* opacity: 0.5; */
 }
 
 .content {
