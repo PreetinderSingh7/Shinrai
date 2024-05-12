@@ -55,9 +55,17 @@
             <p>Explore a symphony of secure authentication options on our Shinrai pricing page. Unlock your digital creativity with unrestricted access to a diverse array of authentication methods and curated security features.</p>
         </div>
         <div>
-            <button>Join us</button>
-        </div>
+          <button id="joinUsButton" onclick="showModal()">Join us</button>
+      </div>
     </div>
+
+    <div id="myModal" class="modal" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h1>This feature is currently unavailable. Please enjoy our free service.</h1>
+      </div>
+  </div>
+
 
     <div class="faqs" id="explore1">
         <h2>LEARN MORE ABOUT Shinrai.</h2>
@@ -142,5 +150,19 @@
         <p>© 2024 Shinrai. All rights reserved.</p>
         <p><a class="aboutus" href="#aboutus">About Us</a> | <a class="aboutus" href="#contact">Contact</a></p>
     </div>
+    <script>
+      // JavaScript functions for the pop-up modal
+      function showModal() {
+          var modal = document.getElementById("myModal");
+          modal.style.display = "block";
+      }
+
+      function closeModal() {
+          var modal = document.getElementById("myModal");
+          modal.style.display = "none";
+      }
+      var joinUsButton = document.getElementById("joinUsButton");
+      joinUsButton.style.marginTop = "20px"; // Adjust the margin top as needed
+  </script>
 </body>
 </html>
