@@ -83,6 +83,9 @@ document.getElementById('searchButton').addEventListener('click', () => {
             "x": "img/xlogo.jpeg",
             "google": "img/google.jpeg",
             "microsoft": "img/logo.png",
+            "amazon": "img/icons8-amazon-94.png",
+            "flipkart": "img/icons8-flipkart-50.png",
+
 
             // Add more mappings as needed
         };
