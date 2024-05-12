@@ -14,11 +14,11 @@
         var websiteName = document.getElementById('websiteName').value;
         var websiteLink = document.getElementById('websiteLink').value;
         if (websiteName && websiteLink) {
-            addLinkIcon(websiteName, websiteLink, 'img/WhatsApp_Image_2024-04-02_at_23.33.54_a3b612e2-removebg-preview.ico');
+            addLinkIcon(websiteName, websiteLink, 'img/link.png');
 
             // Save the icon to local storage
             var savedIcons = JSON.parse(localStorage.getItem('icons')) || [];
-            savedIcons.push({ name: websiteName, link: websiteLink, img: 'img/WhatsApp_Image_2024-04-02_at_23.33.54_a3b612e2-removebg-preview.ico' });
+            savedIcons.push({ name: websiteName, link: websiteLink, img: 'img/link.png' });
             localStorage.setItem('icons', JSON.stringify(savedIcons));
 
             document.getElementById('websiteName').value = '';
