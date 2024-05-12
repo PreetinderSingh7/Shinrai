@@ -21,6 +21,7 @@ header {
 
 .right_bx1 {
     position: relative;
+    right: 220px;
 }
 
 .right_bx1 img {
@@ -140,3 +141,25 @@ p a:hover {
     font-size: 16px;
     transition: all 0.3s ease;
 }
+/* @media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .left_bx1,
+    .right_bx1 {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left_bx1,
+    .right_bx1 {
+        width: 80%;
+    }
+
+    .right_bx1 img {
+        display: none;
+    }
+} */
