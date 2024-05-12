@@ -55,3 +55,40 @@ body {
 .card:hover {
   transform: scale(1.05);
 }
+.login-section {
+  text-align: center;
+  margin-top: 50px;
+}
+.login-icons img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.login-section, .link-section {
+  text-align: center;
+  margin-top: 50px;
+}
+.login-icons img, .link-icons img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+.link-icon {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+.link-icon img {
+  width: 50px;
+  height: 50px;
+}
+.delete-icon {
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+  position: relative;
+  top: -10px;
+}

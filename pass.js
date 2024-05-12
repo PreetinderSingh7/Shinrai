@@ -1,4 +1,64 @@
-  // Event listener for search button click
+     // Load icons from local storage when the page loads
+     window.addEventListener('load', function() {
+        var savedIcons = JSON.parse(localStorage.getItem('icons'));
+        if (savedIcons) {
+            var linkIconsContainer = document.getElementById('linkIcons');
+            savedIcons.forEach(function(icon) {
+                addLinkIcon(icon.name, icon.link, icon.img);
+            });
+        }
+    });
+
+    document.getElementById('customLinkForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var websiteName = document.getElementById('websiteName').value;
+        var websiteLink = document.getElementById('websiteLink').value;
+        if (websiteName && websiteLink) {
+            addLinkIcon(websiteName, websiteLink, 'img/WhatsApp_Image_2024-04-02_at_23.33.54_a3b612e2-removebg-preview.ico');
+
+            // Save the icon to local storage
+            var savedIcons = JSON.parse(localStorage.getItem('icons')) || [];
+            savedIcons.push({ name: websiteName, link: websiteLink, img: 'img/WhatsApp_Image_2024-04-02_at_23.33.54_a3b612e2-removebg-preview.ico' });
+            localStorage.setItem('icons', JSON.stringify(savedIcons));
+
+            document.getElementById('websiteName').value = '';
+            document.getElementById('websiteLink').value = '';
+        } else {
+            alert('Please enter both website name and link.');
+        }
+    });
+
+    function addLinkIcon(name, link, imgSrc) {
+        var linkIconsContainer = document.getElementById('linkIcons');
+        var linkIcon = document.createElement('div');
+        linkIcon.className = 'link-icon';
+        linkIcon.innerHTML = `
+            <a href="${link}" target="_blank">
+                <img src="${imgSrc}" alt="${name}">
+                <span class="delete-icon" onclick="deleteLink(this)">&times;</span>
+            </a>
+            <p>${name}</p>
+        `;
+        linkIconsContainer.appendChild(linkIcon);
+    }
+
+    function deleteLink(deleteBtn) {
+        // Stop event propagation to prevent opening the link
+        event.stopPropagation();
+    
+        var linkIcon = deleteBtn.parentNode.parentNode;
+        var linkName = linkIcon.querySelector('p').textContent;
+        var savedIcons = JSON.parse(localStorage.getItem('icons')) || [];
+        var updatedIcons = savedIcons.filter(function(icon) {
+            return icon.name !== linkName;
+        });
+        localStorage.setItem('icons', JSON.stringify(updatedIcons));
+        linkIcon.remove();
+    }
+
+
+
+// Event listener for search button click
 document.getElementById('searchButton').addEventListener('click', () => {
     const searchInput = document.getElementById('searchInput').value.toLowerCase();
     const cards = document.querySelectorAll('.card');
@@ -22,6 +82,8 @@ document.getElementById('searchButton').addEventListener('click', () => {
             "whatsapp": "img/whatapp logo.jpeg",
             "x": "img/xlogo.jpeg",
             "google": "img/google.jpeg",
+            "microsoft": "img/logo.png",
+
             // Add more mappings as needed
         };
 

@@ -29,13 +29,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3>How Shinrai Protects Your Privacy</h3>
-                <p>Shinrai uses state-of-the-art encryption to protect your data. We never share your personal information with third parties without your explicit consent. Our user authentication software ensures that only you can access your account. With Shinrai, your privacy is in safe hands.</p>
+               <center> <h3>How Shinrai Protects Your Privacy</h3>
+                <p>Shinrai uses state-of-the-art encryption to protect your data. We never share your personal information with third parties without your explicit consent. Our user authentication software ensures that only you can access your account. With Shinrai, your privacy is in safe hands.</p></center>
             </div>
         </div>
     </div>
+    <br>
+    <br>
     <div class="container">
-        <h1>Password Manager</h1>
+     <center>   <h1>Password Manager</h1></center>
         <p>We're thrilled to have you here. Your digital life contains a myriad of passwords, and we know how challenging it can be to manage them all. That's why we're here to make it easy for you.</p>
         
         <!-- Search bar -->
@@ -47,11 +49,13 @@
     </div>
         
 
-        <h2>Your Passwords <span id="alert">(Copied!)</span></h2> 
+        <center><h2>Your Passwords <span id="alert">(Copied!)</span></h2> </center>
         <div id="passwordCards" class="row">
             <!-- Bootstrap cards will be dynamically added here -->
         </div>
-        <h2>Add a Password</h2>
+        <br>
+        <br>
+       <center><h2>Add a Password</h2></center> 
         <form id="passwordForm">
             <div class="form-group">
                 <label for="website">Website:</label>
@@ -71,9 +75,13 @@
         </form>
     </div>
     
-    <!-- Generate Password Section -->
+    
     <div style="margin-top: 20px; background-color: whitesmoke;" class="container" id="genpass">
-        <h2>Generate Password</h2>
+        <center><h1>Password Generate</h1></center>
+        <p>Generate strong and secure passwords effortlessly with our password generator tool. Choose your desired level of password strength – weak, medium, or strong – and let our generator create a unique and robust password for you. Enhance the security of your accounts and protect your sensitive information with ease.</p>
+<br>
+<br>
+        <center><h2>Generate Password</h2></center>
         <div id="passwordGenerator">
             <label for="passwordStrength">Password Strength:</label>
             <select class="form-control" id="passwordStrength">
@@ -90,6 +98,46 @@
         </div>
     </div>
     
+
+    <h1 style="text-align: center;">Quick Login</h1>
+
+<div class="container">
+    <div class="login-section">
+        <p>Log in quickly using your existing accounts copy the username and password from above (if stored) click on the icons wher you want to login.</p>
+        <div class="login-icons">
+            <!-- Replace the image sources with your own icons -->
+            <a href="https://account.microsoft.com/account"><img src="img/logo.png" alt="Microsoft Login"></a>
+            <a href="https://www.youtube.com/@signin.."><img src="img\icons8-youtube-48.png" alt="YouTube Login"></a>
+            <a href="https://www.instagram.com/accounts/login/"><img src="img\icons8-instagram-48.png" alt="Instagram Login"></a>
+            <a href="https://accounts.snapchat.com/accounts/v2/login"><img src="img\snapchat.jpeg" alt="Snapchat Login"></a>
+            <a href="https://www.google.com/?hl=login"><img src="img\google.jpeg" alt="Google Login"></a>
+            <a href="https://www.facebook.com/login.php/"><img src="img\icons8-facebook-48.png" alt="Facebook Login"></a>
+
+            <a href="https://twitter.com/i/flow/login"><img src="img\xlogo.jpeg" alt="X Login"></a>
+
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container link-section">
+    <h2>Add Custom Link</h2>
+    <p>
+        Here you can add custom links and website names to quickly access or log in to your favorite websites. Simply enter the website name and its URL in the form below, and click "Create Icon" to generate an icon for quick access. You can also delete any custom links you no longer need by clicking the cross button next to the respective icon.
+    </p>
+    
+    <form id="customLinkForm">
+        <input type="text" id="websiteName" placeholder="Website Name">
+        <input type="url" id="websiteLink" placeholder="Website Link">
+        <button type="submit">Create Icon</button>
+    </form>
+    <div class="link-icons" id="linkIcons">
+        <!-- Icons will be dynamically added here -->
+    </div>
+</div>
+
+
     <!-- Feedback Section -->
     <div class="container mt-5">
         <h2>Feedback</h2>
